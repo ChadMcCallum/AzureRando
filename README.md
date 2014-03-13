@@ -11,6 +11,7 @@ making a post request against this one endpoint every 30 minutes.
 This won't actually work unless you create a "mytwittersettings.xml" file in the same directory as the web service - I 
 did this so that I could ignore the file in git and not accidentially upload my app keys.  It should follow the following format:
 
+```
 <appSettings>
   <add key="consumerKey" value="from-twitter" />
   <add key="consumerSecret" value="from-twitter" />
@@ -18,6 +19,7 @@ did this so that I could ignore the file in git and not accidentially upload my 
   <add key="tokenSecret" value="from-twitter" />
   <add key="password" value="whatever you want it to be" />
 </appSettings>
+```
 
 The last value, "password", is used to filter all post requests to the web service, so that people don't just randomly spam the endpoint and cause it to flood twitter.  That same value needs to be sent as part of the post request for the request to be validated.
 
